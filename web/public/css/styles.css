@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/*Header*/
+.header{
+    background-color:#fff;
+    width: 100%;
+    margin-bottom: 2em;
+}
+.main-menu, .right-menu{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    /*font-family: 'Pacifico', cursive;*/
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.main-menu{
+    background-color: #f1c4ff;    
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 30px;
+}
+.main-menu a, .right-menu a{
+    text-decoration: none;
+}
+.main-menu a{
+    color: #fff;
+}
+.right-menu a{
+    color: #fff;
+}
+.main-menu a:hover{
+    color: #b2fcfe;
+}
+.right-menu a:hover{
+    color: #f1c4ff;
+}
+.main-menu ul, .right-menu ul{
+    display: inline-block;
+    margin:0;
+    padding: 0;
+}
+.main-menu ul li, .right-menu ul li{
+    list-style: none;
+    display: inline-block;
+    padding:10px;
+    text-align: center;
+}
+.right-menu{
+    background-color: #b2fcfe;
+    border-radius: 30px;
+}
+.col-header-25, .col-header-50{
+    display: inline-block;
+}
+.col-header-50{
+    width: 45%;
+    margin:0 25px;
+}
+.col-header-25{
+    width: 25%;
+}
+.main-logo{
+    text-align: center;
+}
+
+
+/*Footer*/
+footer{
+    background-color: #ffc9a1;
+    color:#fff;
+    width:100%;
+    margin-top:2em;
+    font-family: 'Comic Neue', cursive;
+}
+footer h4{
+    color:#fbff8f;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+.col-footer{
+    width:24.5%;
+    display: inline-block;
+    padding: 20px 0;
+}
+.rss ul li{
+    display: inline-block;
+}
+.rss a{
+    color:#fff;
+}
+.rss a:hover{
+    color:#fbff8f;
+}
+.rss i{
+    font-size: 26px;
+    background-color: #9bffd2;
+    margin: 10px 8px 0;
+    border-radius: 30px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+}
