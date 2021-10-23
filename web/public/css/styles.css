@@ -2,25 +2,32 @@
     margin:0;
     padding:0;
 }
+li {
+    list-style: none;
+}
 
 /*Header*/
 .header{
-    background-color:#fff;
+    background-color:#fffafa;
     width: 100%;
     margin-bottom: 2em;
+    border-bottom: 1px solid #6f1d57;
+    -webkit-box-shadow: 0px 5px 20px 1px rgba(111,29,87,0.7);
+    -moz-box-shadow: 0px 5px 20px 1px rgba(111,29,87,0.7);
+    box-shadow: 0px 5px 20px 1px rgba(111,29,87,0.7);
+
 }
 .main-menu, .right-menu{
     margin: 0 auto;
     text-align: center;
     font-weight: bold;
-    text-transform: uppercase;
-    /*font-family: 'Pacifico', cursive;*/
-    font-family: 'Comic Neue', cursive;
+    text-transform: capitalize;
+    /*font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Jura', sans-serif;
     font-size: 20px;
-    letter-spacing: 1px;
 }
 .main-menu{
-    background-color: #f1c4ff;    
+    /*background-color: #f1c4ff;*/
     margin: 0 auto;
     text-align: center;
     border-radius: 30px;
@@ -28,17 +35,11 @@
 .main-menu a, .right-menu a{
     text-decoration: none;
 }
-.main-menu a{
-    color: #fff;
+.main-menu a, .right-menu a{
+    color: #6f1d57;
 }
-.right-menu a{
-    color: #fff;
-}
-.main-menu a:hover{
-    color: #b2fcfe;
-}
-.right-menu a:hover{
-    color: #f1c4ff;
+.main-menu a:hover, .right-menu a:hover{
+    color: #fcbd8b;
 }
 .main-menu ul, .right-menu ul{
     display: inline-block;
@@ -46,13 +47,12 @@
     padding: 0;
 }
 .main-menu ul li, .right-menu ul li{
-    list-style: none;
     display: inline-block;
     padding:10px;
     text-align: center;
 }
 .right-menu{
-    background-color: #b2fcfe;
+    /*background-color: #b2fcfe;*/
     border-radius: 30px;
 }
 .col-header-25, .col-header-50{
@@ -68,22 +68,27 @@
 .main-logo{
     text-align: center;
 }
+.main-logo img{
+    width: 200px;
+    height: auto;
+    padding: 15px 0;
+}
 
 
 /*Footer*/
 footer{
-    background-color: #ffc9a1;
-    color:#fff;
+    background-color: #6f1d57;
+    color:#fffafa;
     width:100%;
     margin-top:2em;
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Quicksand', sans-serif;
 }
 footer h4{
-    color:#fbff8f;
+    color:#fcbd8b;
     text-align: center;
-    font-family: 'Pacifico', cursive;
-    font-size: 28px;
-    letter-spacing: 1px;
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
 }
 .col-footer{
     width:24.5%;
@@ -94,14 +99,14 @@ footer h4{
     display: inline-block;
 }
 .rss a{
-    color:#fff;
+    color:#fffafa;
 }
 .rss a:hover{
-    color:#fbff8f;
+    color:#6f1d57;
 }
 .rss i{
     font-size: 26px;
-    background-color: #9bffd2;
+    background-color: #fcbd8b;
     margin: 10px 8px 0;
     border-radius: 30px;
     height: 45px;

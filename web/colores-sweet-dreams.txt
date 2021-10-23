@@ -1,19 +1,19 @@
-VERDE
-#9bffd2
-rgb(155,255,210)
-
-MOSTAZA
-#fbff8f
-rgb(251,255,143)
+MORADO
+#6f1d57
+rgb(111,29,87)
 
 ROSA
-#f1c4ff
-rgb(241,196,255)
+#e8789a
+rgb(232,120,154)
 
-MARRON
-#ffc9a1
-rgb(255,201,161)
+NARANJA
+#fcbd8b
+rgb(252,189,139)
 
-AZUL
-#b2fcfe
-rgb(178,252,254)
+CREMA
+#eddab9
+rgb(237,218,185)
+
+BLANCO
+#fffafa
+rgb(255,250,250)
