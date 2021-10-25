@@ -102,9 +102,10 @@ li {
 .dividirColumnas {
     display: flex;
     width: 100vw;
-    height: 100vh;
     justify-content: space-around;
     margin-top: 70px;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 20px;
 }
 
 .imagenProducto img {
@@ -130,6 +131,7 @@ li {
 }
 
 .listado ul {
+    font-family: 'Quicksand', sans-serif;
     display: flex;
     padding-left: 0px;
     flex-direction: column;
@@ -137,12 +139,14 @@ li {
 }
 
 .estilo_cuadro {
+    font-family: 'Quicksand', sans-serif;
     border-radius: 5px;
     margin: 10px;
     border: 2px solid #6f1d57;
 }
 
 .boton_carrito {
+    font-family: 'Quicksand', sans-serif;
     border-radius: 5px;
     margin: 0 auto;
     background-color: #6f1d57;
@@ -152,6 +156,7 @@ li {
 }
 
 .prod h3 {
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
     padding-bottom: 10px;
 }
@@ -160,12 +165,18 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #eddab9;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .imagenes_prod_similares img {
     width: 20vw;
     height: 20hw;
-    border: 2px solid rgba(111, 29, 87, 0.7);
+    border-bottom-left-radius: 25% 100%;
+    border-bottom-right-radius: 25% 100%;
+    border-top-left-radius: 25% 100%;
+    border-top-right-radius: 25% 100%;
 }
 
 .imagenes_prod_similares {}
