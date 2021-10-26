@@ -23,3 +23,11 @@ server.get('/detalleDelProducto', (req, res) => {
 server.get('/carritoDeCompras', (req, res) => {
     res.sendFile(__dirname + '/views/carritoDeCompras.html');
 });
+
+server.get('/detalleDelProducto', (req, res) => {
+    res.sendFile(__dirname + '/views/login.html');
+});
+
+server.get('/detalleDelProducto', (req, res) => {
+    res.sendFile(__dirname + '/views/register.html');
+});
