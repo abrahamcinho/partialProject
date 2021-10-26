@@ -24,10 +24,10 @@ server.get('/carritoDeCompras', (req, res) => {
     res.sendFile(__dirname + '/views/carritoDeCompras.html');
 });
 
-server.get('/detalleDelProducto', (req, res) => {
+server.get('/login', (req, res) => {
     res.sendFile(__dirname + '/views/login.html');
 });
 
-server.get('/detalleDelProducto', (req, res) => {
+server.get('/register', (req, res) => {
     res.sendFile(__dirname + '/views/register.html');
 });
