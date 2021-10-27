@@ -1,4 +1,4 @@
-#Retro
+## Retro
 
 - Plan de acciones de mejora.
 
