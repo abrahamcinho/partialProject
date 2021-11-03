@@ -9,17 +9,17 @@ server.listen(3030, (req, res) => {
     console.log("Server para Sweet Dreams online...")
 });
 
-const HOME_PAGE = "/views/home.html";
+const HOME_PAGE = "views/home.html";
+const PRODUCT_PAGE = "views/detalleDelProducto.html";
+const CART_PAGE = "views/carritoDeCompras.html";
 
 
-server.get("/", (req, res) => {
+server.get("/", (req, res) =>{
     res.sendFile(path.join(__dirname, HOME_PAGE))
-        //res.send("index.html");
 });
 server.get('/detalleDelProducto', (req, res) => {
-    res.sendFile(__dirname + '/views/detalleDelProducto.html');
+    res.sendFile(path.join(__dirname, PRODUCT_PAGE));
 });
-
 server.get('/carritoDeCompras', (req, res) => {
-    res.sendFile(__dirname + '/views/carritoDeCompras.html');
+    res.sendFile(path.join(__dirname, CART_PAGE));
 });

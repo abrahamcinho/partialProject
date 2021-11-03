@@ -172,11 +172,8 @@ li {
 
 .imagenes_prod_similares img {
     width: 20vw;
-    height: 20hw;
-    border-bottom-left-radius: 25% 100%;
-    border-bottom-right-radius: 25% 100%;
-    border-top-left-radius: 25% 100%;
-    border-top-right-radius: 25% 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 .imagenes_prod_similares {}
