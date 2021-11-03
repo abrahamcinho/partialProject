@@ -1,0 +1,53 @@
+.register_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-family: 'Jura', sans-serif;
+	color: #fcbd8b;
+}
+
+.register_subcontainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 30%;
+	padding: 2rem;
+	border-radius: .3rem;
+	background-color: #6f1d57;
+}
+
+.register_subcontainer input,
+.register_subcontainer button {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 18px;
+	width: 70%;
+	margin-bottom: .2rem;
+}
+
+.register_subcontainer input {
+	border: none;
+}
+
+.conditions,
+.have_account {
+	font-size: 14px;
+	color: bisque;
+}
+
+.register_subcontainer button {
+	width: 65%;
+	padding: 0.5rem;
+	margin-top: 1rem;
+	border-radius: .25rem;
+	background-color: #fcbd8b;
+	font-family: 'Quicksand', sans-serif;
+	color: #6f1d57;
+	margin-bottom: .4rem;
+}
+
+.create_account {
+	margin-bottom: 1.5rem;
+}

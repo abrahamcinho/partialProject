@@ -27,3 +27,8 @@ Todo publico con acceso a internet y paladares dispuestos a deleitarse con la ga
 3. https://www.hechoenlapasteleria.com.ar/
 4. https://esruiz.com.ar/shop/
 5. http://www.labuenosairespasteleria.com.ar/
+
+
+## Trello:
+
+https://trello.com/b/WbYH0veK/proyecto-grupo3
