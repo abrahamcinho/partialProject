@@ -21,6 +21,7 @@
 	padding: 2rem;
 	border-radius: .25rem;
 	background-color: #6f1d57;
+	min-width: 560px;
 }
 
 .login_pass_container {
@@ -66,4 +67,28 @@
 .login_pass_container a {
 	padding: .2rem;
 	color: bisque;
+}
+/*Mobile*/
+@media(max-width:576px){
+	.login_subcontainer{
+		min-width: auto;
+		width: 100%;
+		margin: 30px;
+	}
+	.login_subcontainer{
+		padding:2rem 1rem;
+	}
+	.login_pass_container i{
+		padding:0 2px;
+	}
+}
+/*Mobile Small*/
+@media(max-width:419px){
+	.login_pass_container{
+		width: 100%;
+		padding:1rem 0.5rem;
+	}
+	.login_pass_container a{
+		text-align: center;
+	}
 }
