@@ -95,7 +95,13 @@
         }
         /*Carrito*/
         
-        h2 {}
+        h2.carrito-title{
+            font-family: 'Jura', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: -2.5px;
+            color: #6f1d57
+        }
         
         .grid {
             display: grid;
@@ -192,3 +198,120 @@
             text-align: center;
             line-height: 45px;
         }
+/*Desk 1400*/
+@media(max-width:1499px){
+    .rss i{
+        margin:10px 5px 0;
+    }
+}
+/*Desk 1100*/
+@media(max-width:1199px){
+    .col-footer.rss ul{
+        padding-left:0;
+    }
+    .rss i{
+        margin:10px 7px 0;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+}
+/*Tablet - Landscape*/
+@media(max-width:1120px){
+    .col-header-25.main-logo{
+        width: 20%;
+    }
+    .main-logo img{
+        width: 100%;
+    }
+    .col-header-50{
+        margin:0;
+    }
+    .col-header-25.right-menu, .col-header-50.main-menu{
+        width:100%;
+        position: absolute;
+        right: -100px;
+    }
+    .col-header-50.main-menu{
+        top: 20px;
+    }
+    .col-header-25.right-menu{
+        top:80px;
+    }
+    .main-container h2{
+        font-size: 24px;
+    }
+    footer h4{
+        font-size: 20px;
+    }
+    .col-footer input{
+        width:170px;
+    }
+
+}
+/*Tablet - Portrait*/
+@media(max-width:999px){
+    .col-footer {
+        width: 32%;
+        text-align: center;
+    }
+    .col-footer ul{
+        padding:0;
+    }
+    .col-footer.rss {
+        width: 100%;
+    }
+    .botones{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    }
+}
+/*Tablet - Portrait - Small*/
+@media(max-width:787px){
+    .col-header-50.main-menu{
+        top:10px;
+    }
+    .col-header-25.right-menu{
+        top: 60px;
+    }
+    .col-footer {
+        width: 32%;
+        text-align: center;
+    }
+    .col-footer ul{
+        padding:0;
+    }
+    .col-footer.rss {
+        width: 100%;
+    }
+}
+/*Mobile*/
+@media(max-width:576px){
+    .col-header-25.right-menu, .col-header-50.main-menu{
+        right:0;
+        left: 50px;
+        font-size: 20px;
+    }
+    .col-footer{
+        width: 100%;
+    }
+    .botones{
+        flex-wrap: wrap;
+    }
+    .boton_carrito{
+        margin: 20px;
+    }
+}
+/*Mobile Small*/
+@media(max-width:419px){
+    .col-header-25.main-logo{
+        display: inherit;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .col-header-25.right-menu, .col-header-50.main-menu{
+        position: inherit;
+    }
+
+}

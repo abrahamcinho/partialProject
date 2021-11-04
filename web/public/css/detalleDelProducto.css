@@ -7,90 +7,70 @@ li {
     list-style: none;
 }
 
-
 /*Header*/
-
-.header {
-    background-color: #fffafa;
+.header{
+    background-color:#fffafa;
     width: 100%;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
     border-bottom: 1px solid #6f1d57;
-    -webkit-box-shadow: 0px 5px 20px 1px rgba(111, 29, 87, 0.7);
-    -moz-box-shadow: 0px 5px 20px 1px rgba(111, 29, 87, 0.7);
-    box-shadow: 0px 5px 20px 1px rgba(111, 29, 87, 0.7);
-}
+    -webkit-box-shadow: 0px 5px 20px 1px rgba(111,29,87,0.7);
+    -moz-box-shadow: 0px 5px 20px 1px rgba(111,29,87,0.7);
+    box-shadow: 0px 5px 20px 1px rgba(111,29,87,0.7);
 
-.main-menu,
-.right-menu {
+}
+.main-menu, .right-menu{
     margin: 0 auto;
     text-align: center;
     font-weight: bold;
     text-transform: capitalize;
-    /*font-family: 'Quicksand', sans-serif;*/
     font-family: 'Jura', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 }
-
-.main-menu {
-    /*background-color: #f1c4ff;*/
+.main-menu{
     margin: 0 auto;
     text-align: center;
     border-radius: 30px;
 }
-
-.main-menu a,
-.right-menu a {
+.main-menu a, .right-menu a{
     text-decoration: none;
 }
-
-.main-menu a,
-.right-menu a {
+.main-menu a, .right-menu a{
     color: #6f1d57;
 }
-
-.main-menu a:hover,
-.right-menu a:hover {
+.main-menu a:hover, .right-menu a:hover{
     color: #fcbd8b;
 }
-
-.main-menu ul,
-.right-menu ul {
+.main-menu ul, .right-menu ul{
     display: inline-block;
-    margin: 0;
+    margin:0;
     padding: 0;
 }
-
-.main-menu ul li,
-.right-menu ul li {
+.main-menu ul li, .right-menu ul li{
     display: inline-block;
-    padding: 10px;
+    padding:10px;
     text-align: center;
+    letter-spacing: -2.5px;
 }
-
-.right-menu {
-    /*background-color: #b2fcfe;*/
+.right-menu{
     border-radius: 30px;
 }
-
-.col-header-25,
-.col-header-50 {
+.col-header-25, .col-header-50{
     display: inline-block;
 }
-
-.col-header-50 {
-    width: 45%;
-    margin: 0 25px;
+.col-header-50{
+    width: 40%;
+    margin:0 25px;
 }
-
-.col-header-25 {
+.col-header-25.main-logo{
     width: 25%;
 }
-
-.main-logo {
+.col-header-25.right-menu{
+    width: 28%;
+}
+.main-logo{
     text-align: center;
 }
-
-.main-logo img {
+.main-logo img{
     width: 200px;
     height: auto;
     padding: 15px 0;
@@ -98,11 +78,10 @@ li {
 
 
 /*Body*/
-
 .dividirColumnas {
     display: flex;
-    width: 100vw;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
     margin-top: 70px;
     font-family: 'Quicksand', sans-serif;
     margin-bottom: 20px;
@@ -111,8 +90,20 @@ li {
 .imagenProducto img {
     width: 500px;
     height: 500px;
+    padding:20px;
 }
+.detalles-producto{
+    padding: 0 20px;
+}
+.detalles-producto h1{
+    font-family: 'Jura', sans-serif;
+    color: #6f1d57;
 
+}
+.detalles-producto .listado li{
+    list-style: disclosure-closed;
+    list-style-position: inside;
+}
 .imagenes {
     display: flex;
     flex-direction: column;
@@ -123,8 +114,6 @@ li {
     width: 44px;
     height: 44px;
 }
-
-.boton_imagen2 {}
 
 .imagenes_botones {
     padding-top: 10px;
@@ -143,6 +132,7 @@ li {
     border-radius: 5px;
     margin: 10px;
     border: 2px solid #6f1d57;
+    width: 80%;
 }
 
 .boton_carrito {
@@ -156,7 +146,7 @@ li {
 }
 
 .prod h3 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Jura', sans-serif;
     text-align: center;
     padding-bottom: 10px;
 }
@@ -176,11 +166,8 @@ li {
     border-radius: 50%;
 }
 
-.imagenes_prod_similares {}
-
 
 /*Footer*/
-
 footer {
     background-color: #6f1d57;
     color: #fffafa;
@@ -224,4 +211,134 @@ footer h4 {
     width: 45px;
     text-align: center;
     line-height: 45px;
+}
+/*Desk 1400*/
+@media(max-width:1499px){
+    .rss i{
+        margin:10px 5px 0;
+    }
+}
+/*Desk 1100*/
+@media(max-width:1199px){
+    .col-footer.rss ul{
+        padding-left:0;
+    }
+    .rss i{
+        margin:10px 7px 0;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+}
+/*Tablet - Landscape*/
+@media(max-width:1120px){
+    .col-header-25.main-logo{
+        width: 20%;
+    }
+    .main-logo img{
+        width: 100%;
+    }
+    .col-header-50{
+        margin:0;
+    }
+    .col-header-25.right-menu, .col-header-50.main-menu{
+        width:100%;
+        position: absolute;
+        right: -100px;
+    }
+    .col-header-50.main-menu{
+        top: 20px;
+    }
+    .col-header-25.right-menu{
+        top:80px;
+    }
+    footer h4{
+        font-size: 20px;
+    }
+    .col-footer input{
+        width:170px;
+    }
+
+}
+/*Tablet - Portrait*/
+@media(max-width:999px){
+    /*Especifico de detalleDelProducto.html*/
+    .dividirColumnas{
+        flex-direction: column;
+    }
+    .detalles-producto{
+        padding: 0 20vw;
+        margin-bottom: 40px;
+    }
+    .estilo_cuadro{
+        width: 100%;
+    }
+    .boton_carrito{
+        margin-top: 20px;
+    }
+    .col-footer {
+        width: 32%;
+        text-align: center;
+    }
+    .col-footer ul{
+        padding:0;
+    }
+    .col-footer.rss {
+        width: 100%;
+    }
+}
+/*Tablet - Portrait - Small*/
+@media(max-width:787px){
+    /*Especifico de detalleDelProducto.html*/
+    .imagenProducto img{
+        width: 100%;
+        height: auto;
+    }
+    .detalles-producto{
+        padding: 0 15vw;
+    }
+    .col-header-50.main-menu{
+        top:10px;
+    }
+    .col-header-25.right-menu{
+        top: 60px;
+    }
+    .col-footer {
+        width: 32%;
+        text-align: center;
+    }
+    .col-footer ul{
+        padding:0;
+    }
+    .col-footer.rss {
+        width: 100%;
+    }
+}
+/*Mobile*/
+@media(max-width:576px){
+    /*Especifico de detalleDelProducto.html*/
+    .col-header-25.right-menu, .col-header-50.main-menu{
+        right:0;
+        left: 50px;
+        font-size: 20px;
+    }
+    .col-footer{
+        width: 100%;
+    }
+}
+/*Mobile Small*/
+@media(max-width:419px){
+    /*Especifico de detalleDelProducto.html*/
+    .detalles-producto{
+        padding: 0 10vw;
+    }
+    .col-header-25.main-logo{
+        display: inherit;
+        margin: 0 auto;
+        width: 50%;
+    }
+    .col-header-25.right-menu, .col-header-50.main-menu{
+        position: inherit;
+    }
+
 }
