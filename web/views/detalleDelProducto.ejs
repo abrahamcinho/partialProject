@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="/public/css/detalleDelProducto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<%- include("./partials/header") %>
+
+    <body>
+        <div class="dividirColumnas">
+            <section class="imagenes">
+                <div class="imagenProducto">
+                    <img src="public/images/torta-lucia-b.jpg" alt="Producto">
+                </div>
+
+                <div class="imagenes_botones">
+
+                    <img width="44" hei ght="44" decoding="async" src="public/images/torta-lucia.jpg" class="ui-pdp-image" alt="Imagen">
+                    <img width="44" hei ght="44" decoding="async" src="public/images/torta-lucia-b.jpg" class="ui-pdp-image" alt="Imagen1">
+
+                </div>
+            </section>
+
+            <section class="detalles-producto">
+                <h1>Torta Lucia</h1>
+
+                <h3>$ 2500,00</h3>
+                <div class="listado">
+                    <ul>
+                        <li>Bizcocho de vainilla</li>
+                        <li>Puede seleccionar entre distintos rellenos</li>
+                        <li>Cubierta de pasta ballina color rosa pastel</li>
+                        <li>Decorada con macarons y figuras comestibles de azucar glass</li>
+                        <li>Puede selecionar distintos tamaños</li>
+                    </ul>
+                </div>
+                <form action="# " method="GET "></form>
+                <div>
+                    <label>Seleccione rellenos:</label>
+                    <select class="estilo_cuadro" name="Presentacion ">
+                <option value="circular ">Crema chantilly con fresas y dulce de leche con nuez</option>
+                <option value="cuadrada ">Chocolate amargo y crema de frutos rojos</option>
+                <option value="corazon ">Mouse de limon y chocolate con nuex</option>
+                </select>
+                </div>
+
+                <div>
+                    <label>Seleccione cantidad de porciones:</label>
+                    <select class="estilo_cuadro" name="Cantidad de porciones ">
+                    <option value="4 porciones ">4 porciones</option>
+                    <option value="6 porciones ">6 porciones</option>
+                    <option value="8 porciones ">8 porciones</option>
+                </select>
+                </div>
+
+                <div>
+                    <button class="boton_carrito" name="boton " type="button ">AÑADIR AL CARRITO</button>
+                </div>
+            </section>
+        </div>
+        <div class="prod">
+            <h3>Productos similares</h3>
+        </div>
+        <div class="productos_similares">
+            <div class="imagenes_prod_similares">
+                <img src="/public/images/torta-sofia.jpg">
+            </div>
+
+            <div class="imagenes_prod_similares">
+                <img src="/public/images/torta-emma.jpg">
+            </div>
+
+        </div>
+    </body>
+    <%- include("./partials/footer") %>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js " integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js " integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u " crossorigin="anonymous "></script>
+
+        </html>
