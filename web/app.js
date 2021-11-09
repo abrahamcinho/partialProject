@@ -14,6 +14,7 @@ const loginCTRL = require("./controllers/login_Ctrl");
 const detalleDelProductoCTRL = require("./controllers/detalleDelProducto_Ctrl");
 const registerCTRL = require("./controllers/register_Ctrl");
 const productosCTRL = require("./controllers/productos_Ctrl");
+const listadoProductosCTRL = require("./controllers/listadoProds_Ctrl");
 
 
 
@@ -23,6 +24,7 @@ server.use("/login", loginCTRL);
 server.use("/detalleDelProducto", detalleDelProductoCTRL);
 server.use("/registro", registerCTRL);
 server.use("/carga-edicion-productos", productosCTRL);
+server.use("/listado-productos", listadoProductosCTRL);
 
 
 server.listen(3030, (req, res) => {
