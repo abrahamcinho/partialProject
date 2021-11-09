@@ -11,16 +11,18 @@ server.set("view engine", "ejs");
 const carritoCTRL = require("./controllers/carrito_Ctrl");
 const homeCTRL = require("./controllers/home_Ctrl");
 const loginCTRL = require("./controllers/login_Ctrl");
-const productosCTRL = require("./controllers/productos_Ctrl");
+const detalleDelProductoCTRL = require("./controllers/detalleDelProducto_Ctrl");
 const registerCTRL = require("./controllers/register_Ctrl");
+const productosCTRL = require("./controllers/productos_Ctrl");
 
 
 
 server.use("/carritoDeCompras", carritoCTRL);
 server.use("/", homeCTRL);
 server.use("/login", loginCTRL);
-server.use("/productos", productosCTRL);
+server.use("/detalleDelProducto", detalleDelProductoCTRL);
 server.use("/registro", registerCTRL);
+server.use("/productos", productosCTRL);
 
 
 server.listen(3030, (req, res) => {
