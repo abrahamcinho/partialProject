@@ -22,7 +22,7 @@ server.use("/", homeCTRL);
 server.use("/login", loginCTRL);
 server.use("/detalleDelProducto", detalleDelProductoCTRL);
 server.use("/registro", registerCTRL);
-server.use("/productos", productosCTRL);
+server.use("/carga-edicion-productos", productosCTRL);
 
 
 server.listen(3030, (req, res) => {
