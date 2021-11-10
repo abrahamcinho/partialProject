@@ -55,5 +55,3 @@ Para acceder a la vista cargaEdicionProductos.ejs hay que colocar http://localho
 
 
 
-
-
