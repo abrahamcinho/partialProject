@@ -51,6 +51,7 @@ Subir Node_modules al GitHub
 
 ## ¿Cómo acceder a Carga y edición de productos?
 
+Para acceder a la vista cargaEdicionProductos.ejs hay que colocar http://localhost:3030/carga-edicion-productos
 
 
 
