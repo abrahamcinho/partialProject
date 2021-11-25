@@ -1,87 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--Abraham - ajuste los codigos EJS para que se vean correctamente al momento de mostrar todos los datos-->
 <%- include("./partials/head") %>
     <%- include("./partials/header") %>
 
         <body>
             <h2 class="prod_tittle">Listado de Productos</h2>
-            <div class="products_container">
+            <div class="products_container"> 
                 <div class="products_subcontainer">
                     <div class="tittle_container">
                         <h4>Tortas</h4>
                     </div>
                     <div class="product_bigbox">
+                        <% tortas.forEach(producto => {%>
+                        <% if (producto.categoria == "Tortas") {%>
                         <div class="product_box">
-                            <img src="/public/images/torta-sofia.jpg">
-                            <h5>Torta Sofía</h5>
-                            <p>Precio: $2.400</p>
+                            <img src="<%= producto.imagen %>">
+                            <h5><%= producto.nombre %></h5>
+                            <p>Precio: $<%= producto.precio %></p>
+                            <a href="/productos/detalle/<%=producto.id%>">Ver detalle del producto</a>
+                            <a href="/productos/editar/<%=producto.id%>">Editar/Eliminar producto</a>
                             <button name="boton" type="button">AÑADIR AL CARRITO</button>
                         </div>
-                        <div class="product_box">
-                            <a href="/detalleDelProducto"><img src="/public/images/torta-lucia.jpg"></a>
-                            <h5>Torta Lucía</h5>
-                            <p>Precio: $2.500</p>
-                            <button name="boton" type="button">AÑADIR AL CARRITO</button>
-                        </div>
-                        <div class="product_box">
-                            <img src="/public/images/torta-emma.jpg">
-                            <h5>Torta Emma</h5>
-                            <p>Precio: $2.200</p>
-                            <button name="boton" type="button">AÑADIR AL CARRITO</button>
-                        </div>
+                            <% } %>                    
+                        <% });%>
                     </div>
+                </div>
+                <div class="products_subcontainer">
                     <div class="tittle_container">
                         <h4>Cupcakes</h4>
                     </div>
                     <div class="product_bigbox">
+                        <% tortas.forEach(producto => {%>
+                        <% if (producto.categoria == "Cupcakes") {%>
                         <div class="product_box">
-                            <img src="/public/images/galleta-1.jpeg">
-                            <h5>Chocolate</h5>
-                            <p>Precio: $1.400</p>
+                            <img src="<%= producto.imagen %>">
+                            <h5><%= producto.nombre %></h5>
+                            <p>Precio: $<%= producto.precio %></p>
+                            <a href="/productos/detalle/<%=producto.id%>">Ver detalle del producto</a>
+                            <a href="/productos/editar/<%=producto.id%>">Editar/Eliminar producto</a>
                             <button name="boton" type="button">AÑADIR AL CARRITO</button>
                         </div>
-                        <div class="product_box">
-                            <img src="/public/images/galleta-2.jpeg">
-                            <h5>Red Velvet</h5>
-                            <p>Precio: $1.500</p>
-                            <button name="boton" type="button">AÑADIR AL CARRITO</button>
-                        </div>
-                        <div class="product_box">
-                            <img src="/public/images/galleta-3.jpeg">
-                            <h5>Caramelo</h5>
-                            <p>Precio: $1.200</p>
-                            <button name="boton" type="button">AÑADIR AL CARRITO</button>
-                        </div>
+                            <% } %>                    
+                        <% });%>
                     </div>
+                </div>
+                <div class="products_subcontainer">
                     <div class="tittle_container">
                         <h4>Facturas</h4>
                     </div>
                     <div class="product_bigbox">
+                        <% tortas.forEach(producto => {%>
+                        <% if (producto.categoria == "Facturas") {%>
                         <div class="product_box">
-                            <img src="/public/images/factura-1.png">
-                            <h5>Manzanita de hojaldre</h5>
-                            <p>Precio: $600</p>
+                            <img src="<%= producto.imagen %>">
+                            <h5><%= producto.nombre %></h5>
+                            <p>Precio: $<%= producto.precio %></p>
+                            <a href="/productos/detalle/<%=producto.id%>">Ver detalle del producto</a>
+                            <a href="/productos/editar/<%=producto.id%>">Editar/Eliminar producto</a>
                             <button name="boton" type="button">AÑADIR AL CARRITO</button>
                         </div>
-                        <div class="product_box">
-                            <img src="/public/images/factura-2.png">
-                            <h5>Palmerita</h5>
-                            <p>Precio: $500</p>
-                            <button name="boton" type="button">AÑADIR AL CARRITO</button>
-                        </div>
-                        <div class="product_box">
-                            <img src="/public/images/factura-3.png">
-                            <h5>Caracola</h5>
-                            <p>Precio: $300</p>
-                            <button name="boton" type="button">AÑADIR AL CARRITO</button>
-                        </div>
+                            <% } %>                    
+                        <% });%>
                     </div>
-                </div>
+                </div>               
             </div>
         </body>
 
         <%- include("./partials/footer") %>
-        <%- include("./partials/scripts") %>
+            <%- include("./partials/scripts") %>
 
 </html>

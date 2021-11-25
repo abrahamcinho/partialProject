@@ -16,9 +16,11 @@
 
 .product_bigbox {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
-    width: 90%;
+    width: 100%;
+    
 }
 
 .tittle_container {
@@ -29,9 +31,9 @@
 .product_box {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    width: 40%;
+    width: 20%;
+    margin-bottom: 40px;
 }
 
 .product_box img {

@@ -15,11 +15,24 @@
 }
 .detalles-producto{
     padding: 0 20px;
+    width: 50%;
 }
 .detalles-producto h1{
     font-family: 'Jura', sans-serif;
     color: #6f1d57;
-
+}
+/*Abraham - agregue nuevos estilos para ajustar mejor el diseño*/
+.detalles-producto .precios{
+    display: block ruby;
+}
+.detalles-producto .precios h3{
+    margin-right: 10px;
+}
+.detalles-producto .precios h5{
+    color: #fcbd8b;
+}
+.detalles-producto .listado{
+    padding: 40px 0;
 }
 .detalles-producto .listado li{
     list-style: disclosure-closed;
@@ -29,6 +42,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
+    width: 50%;
 }
 
 .boton_imagen1 {
