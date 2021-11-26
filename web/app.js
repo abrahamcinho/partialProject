@@ -1,9 +1,9 @@
 const express = require("express");
 const server = express();
 const path = require("path");
-const cors = require("cors");
+//const cors = require("cors");
 //const method_override = require("method-override");
-const multer = require("multer");
+//const multer = require("multer");
 
 server.use("/public", express.static("public"));
 server.set("views", path.resolve(__dirname, "views"));

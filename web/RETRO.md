@@ -49,6 +49,32 @@ Hacer git clone cada vez que quedamos descargar los cambios subidos al GitHub
 Subir Node_modules al GitHub
 
 
+
+## Retro: Sprint 4
+
+1. Comenzar a hacer
+Crear ramas propias para evitar pisar los avances de los compañeros
+
+2. Hacer más
+Reuniones periódicas para disipar dudas, solicitar ayuda y mostar avances
+Continuar elaborando el proyecto sobre la marcha de las clases
+Anotar los puntos claves de las clases para saber su lugar a la hora de consultar para codear
+
+3. Continuar haciendo
+Mantenernos comunicados y atentos a las propuestas realizadas
+Concensuar en todo
+Continuar con la dinámica de solo la info concreta del Proyecto Integrador a GitHub
+Compartir archivos y propuestas tentativas en Discord
+
+4. Hacer menos
+Hacer git clone cada vez que quedamos descargar los cambios subidos al GitHub
+Frustrarnos cuando todo se rompa, porque nos pisamos los avances en el Repo
+
+5. Dejar de hacer
+Frustrarnos al no saber hacer algo
+
+
+
 ## ¿Cómo acceder a Carga y edición de productos?
 
 Para acceder a la vista cargaEdicionProductos.ejs hay que colocar http://localhost:3030/carga-edicion-productos

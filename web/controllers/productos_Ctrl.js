@@ -4,6 +4,7 @@ var fs = require('fs');
 var path = require("path");
 
 const data = require("../data/productos.json");
+const dataPath = path.resolve(__dirname, "../data/productos.json")
 
 
 //Obtener listado de productos
@@ -39,13 +40,25 @@ router.get("/crear", (req, res) => {
 //Acción de creación(a donde se envía el formulario)
 router.post("/crear", (req, res) => {
 
-    let productosJson = fs.readFile("../data/productos.json", "utf-8");
-    let prodJS = JSON.parse(productosJson);
-    let producto = req.body.producto;
-    producto.id = prodJS[prodJS.length - 1].id + 1;
-    prodJS.push(producto);
-    var prodJson = JSON.stringify(prodJS);
-    fs.writeFile("../data/productos.json", prodJson);
+    // let productosJson = data; //fs.readFile("../data/productos.json", "utf-8");
+    // let prodJS = JSON.parse(productosJson);
+    let producto = {
+        id: data[data.length - 1].id + 1,
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        descuento: req.body.descuento,
+        descripcion: req.body.descripcion,
+        categoria: req.body.categoria,
+        relleno_1: req.body.relleno_1,
+        relleno_2: req.body.relleno_2,
+        relleno_3: req.body.relleno_3,
+        porcion_1: req.body.porcion_1,
+        porcion_2: req.body.porcion_2,
+        porcion_3: req.body.porcion_3
+    };
+    data.push(producto);
+    var prodJson = JSON.stringify(data);
+    fs.writeFileSync(dataPath, prodJson);
     res.redirect("/productos");
 });
 
