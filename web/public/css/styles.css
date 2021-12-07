@@ -309,6 +309,36 @@ footer h4{
     text-align: center;
     line-height: 45px;
 }
+/*Formulario - Crear Producto*/
+.container-crear-prod{
+    background: #6f1d57;
+    width: 30%;
+    padding:2em;
+    color:#fcbd8b;
+    font-family: 'Jura', sans-serif;
+    margin: 0 auto;
+}
+.subcontainer-crear-prod{
+    text-align: center;
+}
+.container-crear-prod input, .container-crear-prod textarea, .container-crear-prod label, .container-crear-prod select {
+    width: 80%;
+    padding: 5px;
+}
+.container-crear-prod label{
+    width: 100%;
+}
+.container-crear-prod button{
+    width: 30%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: .25rem;
+    background-color: #fcbd8b;
+    font-family: 'Quicksand', sans-serif;
+    color: #6f1d57;
+    margin-bottom: .4rem;
+}
+
 /*Desk 1400*/
 @media(max-width:1499px){
     .main-container .left-col .aside-destacado .mask{
@@ -325,7 +355,7 @@ footer h4{
 @media(max-width:1399px){
     .main-container .left-col .aside-destacado .description{
         font-size: 16px;
-    }
+    }    
 }
 /*Desk 1200*/
 @media(max-width:1299px){
@@ -334,6 +364,10 @@ footer h4{
     }
     .main-container .main-content .main-products .product .mask img{
         min-height: auto;
+    }
+    /*Formulario - Crear Producto*/
+    .container-crear-prod{
+        width: 40%;
     }
 }
 /*Desk 1100*/
@@ -352,6 +386,10 @@ footer h4{
         height: 40px;
         width: 40px;
         line-height: 40px;
+    }
+    /*Formulario - Crear Producto*/
+    .container-crear-prod{
+        width: 50%;
     }
 }
 /*Tablet - Landscape*/
@@ -464,6 +502,10 @@ footer h4{
     .col-footer.rss {
         width: 100%;
     }
+    /*Formulario - Crear Producto*/
+    .container-crear-prod{
+        width: 70%;
+    }
 }
 /*Mobile*/
 @media(max-width:576px){
@@ -473,6 +515,13 @@ footer h4{
         font-size: 20px;
     }
     .col-footer{
+        width: 100%;
+    }
+    /*Formulario - Crear Producto*/
+    .container-crear-prod{
+        width: 90%;
+    }
+    .container-crear-prod input, .container-crear-prod textarea, .container-crear-prod label, .container-crear-prod select {
         width: 100%;
     }
 }

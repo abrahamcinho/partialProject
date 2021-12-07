@@ -4,11 +4,13 @@ const path = require("path");
 //const cors = require("cors");
 //const method_override = require("method-override");
 //const multer = require("multer");
+const session = require("express-session");
 
 app.use("/public", express.static("public"));
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 //app.use(methodOverride("_method"));
+app.use(session({secret:"Session - Top Secret"}));
 
 app.use(express.urlencoded({
     extended: true

@@ -30,7 +30,6 @@
 	align-items: center;
 	flex-direction: column;
 	border: 1px solid;
-	width: 95%;
 	padding: 1.5rem;
 }
 
@@ -64,9 +63,12 @@
 
 }
 
-.login_pass_container a {
-	padding: .2rem;
-	color: bisque;
+.login_pass_container a{
+	font-weight: bold;
+	color:#e8789a;
+}
+.login_pass_container a:hover{
+	color:#fffafa;
 }
 /*Mobile*/
 @media(max-width:576px){
