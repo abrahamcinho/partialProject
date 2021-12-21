@@ -14,12 +14,20 @@ router.get("/", (req, res) => {
 });
 
 
-//Validar email y password
+
 router.post("/", (req, res) => {
 
-    let usuario = findByField("email", req.body.email);
+    //Manejo de cookies
+    if (req.body.remember) {
+        var hour = 3600;
+        req.session.cookie.maxAge = 14 * 24 * hour;
+        res.cookie("Celeste", "algo");
+    } else {
+        req.session.cookie.expires = false;
+    }
 
-    //if (usuario && usuario.password == req.body.password) {
+    //Validar email y password
+    let usuario = findByField("email", req.body.email);
     if (usuario && bcryptjs.compareSync(req.body.password, usuario.password)) {
         return res.redirect("/");
     } else {
