@@ -8,13 +8,16 @@
                 <div class="register_container">
                     <div class="register_subcontainer">
                         <h3 class="create_account">¡Crea tu cuenta!</h3>
-                        <form action="http://localhost:3030/registro" method="POST">
-                            <input type="text" name="nombre" placeholder="Nombre">
-                            <input type="text"  name="apellido" placeholder="Apellido">
+                        <form action="http://localhost:3030/registro" method="POST" enctype="multipart/form-data">
+                            <input type=" text" name="nombre" placeholder="Nombre">
+                            <input type="text" name="apellido" placeholder="Apellido">
                             <input type="email" name="email" placeholder="Email">
-                            <input type="password" name ="password" placeholder="Contraseña">
+                            <input type="password" name="password" placeholder="Contraseña">
+                            <input type="file" name="avatar">
                             <button type="submit"><span>Registrarse</span></button>
-                            <p class="conditions">Al hacer click en <strong>Registrarse</strong>, aceptas nuestros <a title="Política de Privacidad y Utilización de Cookies" href="http://www.nosequeestudiar.net/politica-de-privacidad-y-utilizacion-de-cookies/" target="_blank">Terminos y Condiciones</a>                            incluida nuestra politica de utilización de Cookies.
+                            <p class="conditions">Al hacer click en <strong>Registrarse</strong>, aceptas nuestros
+                                <a title="Política de Privacidad y Utilización de Cookies" href="http://www.nosequeestudiar.net/politica-de-privacidad-y-utilizacion-de-cookies/
+                    " target="_blank">Terminos y Condiciones</a> incluida nuestra politica de utilización de Cookies.
                             </p>
                         </form>
                         <h5 class="have_account">¿Ya tienes cuenta? <a href="/login">Ingresar a Sweet Dreams</a></h5>

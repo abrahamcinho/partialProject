@@ -1,5 +1,5 @@
 const express = require("express");
-const { validationResult } = require("express-validator");
+//const { validationResult } = require("express-validator");
 const router = express.Router();
 var fs = require('fs');
 var path = require("path");
@@ -19,7 +19,8 @@ router.post("/", (req, res) => {
 
     let usuario = findByField("email", req.body.email);
 
-    if (usuario && usuario.password == req.body.password) {
+    //if (usuario && usuario.password == req.body.password) {
+    if (usuario && bcryptjs.compareSync(req.body.password, usuario.password)) {
         return res.redirect("/");
     } else {
         return res.render("login");

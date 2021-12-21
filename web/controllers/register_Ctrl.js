@@ -6,12 +6,30 @@ var path = require("path");
 const data = require("../data/usuarios.json");
 const dataPath = path.resolve(__dirname, "../data/usuarios.json")
 const bcryptjs = require("bcryptjs");
+const multer = require("multer");
+
+
+
+//configuracion de multer
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "./public/images/avatars");
+    },
+    filename: (req, file, cb) => {
+        let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
+        cb(null, fileName);
+    }
+});
+
+const uploadFile = multer({ storage });
+
+
 
 router.get("/", (req, res) => {
     res.render("register");
 });
 //Registro de Usuario
-router.post("/", (req, res) => {
+router.post("/", uploadFile.single("avatar"), (req, res) => {
     let usuario = findByField("email", req.body.email);
     if (usuario) {
         return res.render("register", {
@@ -28,9 +46,10 @@ router.post("/", (req, res) => {
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             email: req.body.email,
-            password: req.body.password,
-            // password: bcryptjs.hashSync(req.body.password, 10),
-            category: req.body.category
+            //password: req.body.password,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            category: req.body.category,
+            avatar: req.file.filename
         };
 
         data.push(usuario);
