@@ -26,18 +26,22 @@ const homeCTRL = require("./controllers/home_Ctrl");
 const loginCTRL = require("./controllers/login_Ctrl");
 const registerCTRL = require("./controllers/register_Ctrl");
 const productosCTRL = require("./controllers/productos_Ctrl");
+const usuariosCTRL = require("./controllers/users_Ctrl");
+
 
 app.use("/carritoDeCompras", carritoCTRL);
 app.use("/", homeCTRL);
 app.use("/login", loginCTRL);
 app.use("/registro", registerCTRL);
 app.use("/productos", productosCTRL);
+app.use("/usuarios", usuariosCTRL);
 
 app.use('/', require('./routers/main'));
 app.use('/detalleDelProducto', require('./routers/productos'));
 app.use('/login', require('./routers/login'));
 app.use('/registro', require('./routers/register'));
 app.use('/carritoDeCompras', require('./routers/shoppingcart'));
+app.use('/listadoUsuarios', require('./routers/usuarios'));
 
 app.listen(3030, (req, res) => {
     console.log("app para Sweet Dreams online...")
