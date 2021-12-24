@@ -2,7 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("home");
+    //console.log("estoy en session");
+    //console.log(req.session);
+    res.render("home", {
+        user: req.session.userLogged
+    });
 });
 
 module.exports = router;

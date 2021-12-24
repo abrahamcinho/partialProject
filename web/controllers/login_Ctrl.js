@@ -29,9 +29,13 @@ router.post("/", (req, res) => {
     //Validar email y password
     let usuario = findByField("email", req.body.email);
     if (usuario && bcryptjs.compareSync(req.body.password, usuario.password)) {
+        //console.log(req.session);
+        delete usuario.password;
+        req.session.userLogged = usuario;
         return res.redirect("/");
     } else {
         return res.render("login");
+        
     }
 });
 

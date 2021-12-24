@@ -6,6 +6,7 @@ const cors = require("cors");
 const multer = require("multer");
 const session = require("express-session");
 var cookieParser = require("cookie-parser");
+const auth = require("./middlewares/authUser");
 
 app.use(cookieParser());
 
@@ -27,6 +28,7 @@ const loginCTRL = require("./controllers/login_Ctrl");
 const registerCTRL = require("./controllers/register_Ctrl");
 const productosCTRL = require("./controllers/productos_Ctrl");
 
+app.use(auth);
 app.use("/carritoDeCompras", carritoCTRL);
 app.use("/", homeCTRL);
 app.use("/login", loginCTRL);

@@ -10,7 +10,8 @@ const dataPath = path.resolve(__dirname, "../data/productos.json")
 //Obtener listado de productos
 router.get("/", (req, res) => {
     res.render("listadoProductos", {
-        tortas: data
+        tortas: data,
+        user: req.session.userLogged
     });
 });
 
@@ -30,16 +31,23 @@ router.get("/detalle/:id", (req, res) => {
     res.render("detalleDelProducto", {
         producto: data,
         reqID: reqID,
+        user: req.session.userLogged
     });
 }); 
 
 //Formulario de creación de productos
 router.get("/crear", (req, res) => {
-    res.render("crearProd")
+    if (req.session.userLogged != undefined){
+        res.render("crearProd", {
+            user: req.session.userLogged
+        });
+    }else{
+        res.render("login")
+    }
 });
 //Acción de creación(a donde se envía el formulario)
 router.post("/crear", (req, res) => {
-
+    
     // let productosJson = data; //fs.readFile("../data/productos.json", "utf-8");
     // let prodJS = JSON.parse(productosJson);
     let producto = {
@@ -66,7 +74,9 @@ router.post("/crear", (req, res) => {
 //router.get("/productos/: id/edit", (req, res) => {
 //});
 router.get("/editar", (req, res) => {
-    res.render("editarProd")
+    res.render("editarProd", {
+        user: req.session.userLogged
+    })
 });
 
 //Acción de edición(a donde se envía el formulario)
