@@ -15,32 +15,35 @@ app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 //app.use(methodOverride("_method"));
 app.use(session({ secret: "Session - Top Secret" }));
-
-
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+// Controllers constants
 const carritoCTRL = require("./controllers/carrito_Ctrl");
 const homeCTRL = require("./controllers/home_Ctrl");
 const loginCTRL = require("./controllers/login_Ctrl");
 const registerCTRL = require("./controllers/register_Ctrl");
 const productosCTRL = require("./controllers/productos_Ctrl");
+const usuariosCTRL = require("./controllers/users_Ctrl");
 
+<<<<<<< HEAD
 app.use(auth);
+=======
+//Routes
+>>>>>>> 6bbb0f749b2d59aaaed7fa14136083b7e203b126
 app.use("/carritoDeCompras", carritoCTRL);
 app.use("/", homeCTRL);
 app.use("/login", loginCTRL);
 app.use("/registro", registerCTRL);
 app.use("/productos", productosCTRL);
+app.use("/usuarios", usuariosCTRL);
 
+//Routers
 app.use('/', require('./routers/main'));
 app.use('/detalleDelProducto', require('./routers/productos'));
 app.use('/login', require('./routers/login'));
 app.use('/registro', require('./routers/register'));
 app.use('/carritoDeCompras', require('./routers/shoppingcart'));
+app.use('/listadoUsuarios', require('./routers/usuarios'));
 
-app.listen(3030, (req, res) => {
-    console.log("app para Sweet Dreams online...")
-});
+app.listen(3030, (req, res) => console.log("app para Sweet Dreams online..."));
