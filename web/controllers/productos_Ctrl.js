@@ -82,41 +82,13 @@ router.get("/editar", (req, res) => {
 //Acción de edición(a donde se envía el formulario)
 router.put("/editar/:id", (req, res) => {
     //writeFIleSInc
-    let prods = JSON.parse(fs.readFileSync(data));
-    let idProduct = req.params.id;
-
-    let prodEdit = {
-        id: idProducto,
-        nombre: req.body.nombre,
-        precio: req.body.precio,
-        descuento: req.body.descuento,
-        descripcion: req.body.descripcion,
-        categoria: req.body.categoria,
-        relleno_1: req.body.relleno_1,
-        relleno_2: req.body.relleno_2,
-        relleno_3: req.body.relleno_3,
-        porcion_1: req.body.porcion_1,
-        porcion_2: req.body.porcion_2,
-        porcion_3: req.body.porcion_3
-    };
-
-    prods[idProduct] = prodEdit;
-    const prodToString = JSON.stringify(prods);
-
-    fs.writeFileSync(data, prodToString);
-    res.redirect("/productos");
 });
 
 //Acción de borrado
-router.delete("/eliminars/:id", (req, res) => {
-    let prods = JSON.parse(fs.readFileSync(data));
-    let idProduct = req.params.id;
-    
-    prods = prods.filter(({ id }) => id !== idProduct);
-    const prodToString = JSON.stringify(prods);
-    
-    fs.writeFileSync(data, prodToString);
-    res.redirect("/productos");
+router.delete("/eliminars/: id", (req, res) => {
+    let producto = req.body.producto;
+    data = data.filter(m => m !== producto);
+
 })
 
 module.exports = router;
