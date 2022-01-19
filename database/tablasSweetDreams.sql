@@ -14,7 +14,7 @@ CREATE TABLE `sweetdreams`.`flavors_products` ( `flavor_prod_id` INT(10) UNSIGNE
 
 CREATE TABLE `sweetdreams`.`sizes_products` ( `size_prod_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT , `prod_id` INT(10) NOT NULL , `size_id` INT(10) NOT NULL , PRIMARY KEY (`size_prod_id`)) ENGINE = InnoDB; 
 
-ALTER TABLE `users` ADD INDEX(`user_categ_id`);
+ALTER TABLE `users` ADD INDEX(`users_categ_id`);
 
 ALTER TABLE `sweetdreams`.`users` DROP INDEX `user_categ_id`, ADD INDEX `users_user_categ_id_fk` (`users_categ_id`) USING BTREE; 
 
