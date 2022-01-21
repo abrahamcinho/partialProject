@@ -1,8 +1,25 @@
-module.exports = (sqlize, Types) => {
+const {
+    DataTypes
+} = require("sequelize");
+module.exports = (sqlize) => {
     const UsersCategories = sqlize.define("users_categories", {
-        user_categ_id: { type: Types.INTEGER, primaryKey: true },
-        name: { type: Types.STRING },
+        users_categ_id: {
+            primaryKey: true,
+            allowNull: false,
+            autoIncrement: true,
+            type: DataTypes.INTEGER
+        },
+        name: {
+            type: DataTypes.STRING,
+            allownull: false
+        },
 
     });
+    UsersCategories.associate = function(models) {
+        UsersCategories.hasMany(models.Users, {
+                as: "categoriasUsuario"
+            })
+            // Las asociaciones con otros objetos deben ser definidos aquí.
+    };
     return UsersCategories;
 }

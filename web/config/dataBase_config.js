@@ -1,8 +1,10 @@
-const { Sequelize, DataTypes } = require("sequelize");
+const { Sequelize } = require("sequelize");
 let db = {};
 const sqlize = new Sequelize('sweetdreams', 'root', '', {
     host: "localhost",
     dialect: "mysql",
+    define: { timestamps: false },
+    logging: false
 });
 
 db.Sequelize = Sequelize;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-01-2022 a las 03:49:33
+-- Tiempo de generación: 20-01-2022 a las 20:41:09
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 7.3.27
 
@@ -32,6 +32,21 @@ CREATE TABLE `flavors` (
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `flavors`
+--
+
+INSERT INTO `flavors` (`flavor_id`, `name`) VALUES
+(1, 'Crema chantilly con fresas y dulce de leche con nuez'),
+(2, 'Chocolate amargo y crema de frutos rojos'),
+(3, 'Mouse de limon y chocolate con nuez'),
+(4, 'Chocolate'),
+(5, 'Red Velvet'),
+(6, 'Caramelo'),
+(7, 'Manzana'),
+(8, 'Vainilla'),
+(9, 'Neutro');
+
 -- --------------------------------------------------------
 
 --
@@ -43,6 +58,27 @@ CREATE TABLE `flavors_products` (
   `prod_id` int(10) UNSIGNED NOT NULL,
   `flavor_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `flavors_products`
+--
+
+INSERT INTO `flavors_products` (`flavor_prod_id`, `prod_id`, `flavor_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3),
+(4, 2, 1),
+(5, 2, 2),
+(6, 2, 3),
+(7, 3, 1),
+(8, 3, 2),
+(9, 3, 3),
+(10, 4, 4),
+(11, 5, 5),
+(12, 6, 6),
+(13, 7, 7),
+(14, 8, 8),
+(15, 9, 9);
 
 -- --------------------------------------------------------
 
@@ -56,10 +92,23 @@ CREATE TABLE `products` (
   `price` int(20) NOT NULL,
   `discount` int(5) NOT NULL,
   `prod_categ_id` int(10) UNSIGNED NOT NULL,
-  `flavor_id` int(10) UNSIGNED NOT NULL,
-  `size_id` int(10) UNSIGNED NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`prod_id`, `name`, `price`, `discount`, `prod_categ_id`, `image`) VALUES
+(1, 'Sofía', 2400, 25, 1, '...'),
+(2, 'Lucía', 2500, 1, 1, '...'),
+(3, 'Emma', 2200, 13, 1, ''),
+(4, 'Chocolate', 1400, 31, 2, '...'),
+(5, 'Red Velvet', 2500, 42, 2, ''),
+(6, 'Caramelo', 1200, 3, 2, ''),
+(7, 'Manzanita de hojaldre', 600, 18, 3, '...'),
+(8, 'Palmerita', 500, 31, 3, ''),
+(9, 'Caracola', 300, 39, 3, '');
 
 -- --------------------------------------------------------
 
@@ -72,6 +121,15 @@ CREATE TABLE `products_categories` (
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `products_categories`
+--
+
+INSERT INTO `products_categories` (`prod_categ_id`, `name`) VALUES
+(1, 'Tortas'),
+(2, 'Cupcakes'),
+(3, 'Facturas');
+
 -- --------------------------------------------------------
 
 --
@@ -82,6 +140,15 @@ CREATE TABLE `sizes` (
   `size_id` int(10) UNSIGNED NOT NULL,
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `sizes`
+--
+
+INSERT INTO `sizes` (`size_id`, `name`) VALUES
+(1, 'Individual'),
+(2, 'Mediana'),
+(3, 'Familiar');
 
 -- --------------------------------------------------------
 
@@ -94,6 +161,27 @@ CREATE TABLE `sizes_products` (
   `prod_id` int(10) NOT NULL,
   `size_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `sizes_products`
+--
+
+INSERT INTO `sizes_products` (`size_prod_id`, `prod_id`, `size_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3),
+(4, 2, 1),
+(5, 2, 2),
+(6, 2, 3),
+(7, 3, 1),
+(8, 3, 2),
+(9, 3, 3),
+(10, 4, 1),
+(11, 5, 1),
+(12, 6, 1),
+(13, 7, 1),
+(14, 8, 1),
+(15, 9, 1);
 
 -- --------------------------------------------------------
 
@@ -111,6 +199,13 @@ CREATE TABLE `users` (
   `users_categ_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `password`, `avatar`, `users_categ_id`) VALUES
+(1, 'Abraham', 'Marval', 'abrahamcinho@gmail.com', '1234', '...', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -121,6 +216,14 @@ CREATE TABLE `users_categories` (
   `users_categ_id` int(255) NOT NULL,
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `users_categories`
+--
+
+INSERT INTO `users_categories` (`users_categ_id`, `name`) VALUES
+(1, 'usuario'),
+(2, 'administrador');
 
 --
 -- Índices para tablas volcadas
@@ -145,9 +248,7 @@ ALTER TABLE `flavors_products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`prod_id`),
-  ADD KEY `products_prod_categ_id_fk` (`prod_categ_id`) USING BTREE,
-  ADD KEY `products_sizes_id` (`size_id`) USING BTREE,
-  ADD KEY `products_flavors_id` (`flavor_id`) USING BTREE;
+  ADD KEY `products_prod_categ_id_fk` (`prod_categ_id`) USING BTREE;
 
 --
 -- Indices de la tabla `products_categories`
@@ -190,49 +291,49 @@ ALTER TABLE `users_categories`
 -- AUTO_INCREMENT de la tabla `flavors`
 --
 ALTER TABLE `flavors`
-  MODIFY `flavor_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `flavor_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `flavors_products`
 --
 ALTER TABLE `flavors_products`
-  MODIFY `flavor_prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `flavor_prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `products_categories`
 --
 ALTER TABLE `products_categories`
-  MODIFY `prod_categ_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `prod_categ_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `sizes`
 --
 ALTER TABLE `sizes`
-  MODIFY `size_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `size_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `sizes_products`
 --
 ALTER TABLE `sizes_products`
-  MODIFY `size_prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `size_prod_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `users_categories`
 --
 ALTER TABLE `users_categories`
-  MODIFY `users_categ_id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `users_categ_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
