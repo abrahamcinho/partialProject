@@ -8,12 +8,17 @@
                 <div class="register_container">
                     <div class="register_subcontainer">
                         <h3 class="create_account">¡Crea tu cuenta!</h3>
-                        <form action="http://localhost:3030/registro" method="POST" enctype="multipart/form-data">
-                            <input type=" text" name="nombre" placeholder="Nombre">
-                            <input type="text" name="apellido" placeholder="Apellido">
-                            <input type="email" name="email" placeholder="Email">
-                            <input type="password" name="password" placeholder="Contraseña">
-                            <input type="file" name="avatar">
+                        <form id="formRegistro" action="http://localhost:3030/registro" method="POST" enctype="multipart/form-data">
+                            <input id="nombre" type=" text" name="nombre" placeholder="Nombre">
+                            <div id="errorNombre" ></div>
+                            <input id="apellido" type="text" name="apellido" placeholder="Apellido">
+                            <div id="errorApellido" ></div>
+                            <input id="email" type="email" name="email" placeholder="Email">
+                            <div id="errorEmail" ></div>
+                            <input id="password" type="password" name="password" placeholder="Contraseña">
+                            <div id="errorPass" ></div>
+                            <input id="avatar" type="file" name="avatar">
+                            <div id="errorAvatar" ></div>
                             <button type="submit"><span>Registrarse</span></button>
                             <p class="conditions">Al hacer click en <strong>Registrarse</strong>, aceptas nuestros
                                 <a title="Política de Privacidad y Utilización de Cookies" href="http://www.nosequeestudiar.net/politica-de-privacidad-y-utilizacion-de-cookies/
@@ -31,5 +36,6 @@
             </script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous">
             </script>
+            <script src="../public/js/script.js"></script>
 
             </html>
